@@ -1,8 +1,8 @@
 function Nav() {
     return (
-        <ul>
-            <li>Shop</li>
-            <li>Add product</li>
+        <ul className="main-header__item-list">
+            <li className="main-header__item">Shop</li>
+            <li className="main-header__item">Add product</li>
         </ul>
     );
 }

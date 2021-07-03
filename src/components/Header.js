@@ -2,7 +2,9 @@ import Nav from "./Nav"
 
 function Header() {
     return (
-        <Nav />
+        <div className="main-header__nav">
+            <Nav />
+        </div>
     );
 }
 

@@ -1,13 +1,16 @@
-import Header from "./Header";
-import Main from "./Main";
-import {BrowserRouter as Router} from 'react-router-dom'
+import Home from './Home';
+import NotFound from './NotFound';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
     <div>
       <Router>
-        <Header />
-        <Main />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/admin" component={Home} />
+          <Route path="*" component={NotFound} />
+        </Switch>
       </Router>
     </div>
   );
