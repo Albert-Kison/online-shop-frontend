@@ -7,7 +7,9 @@ function Home() {
             <div className="main-header">
                 <Header />
             </div>
-            <Main />
+            <div className="main">
+                <Main />
+            </div>
         </div>
     )
 }

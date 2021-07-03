@@ -27,8 +27,11 @@ function AdminMain() {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" onChange={handleChange} value={product}/>
+            <form className="product-form" onSubmit={handleSubmit}>
+            <div className="form-control">
+            <label htmlFor="title">Title</label>
+                <input type="text" onChange={handleChange} value={product} id="title"/>
+            </div>
                 <button type="submit">Send</button>
             </form>
         </div>
