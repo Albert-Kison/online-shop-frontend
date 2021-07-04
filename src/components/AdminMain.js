@@ -1,7 +1,9 @@
 import {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 
 function AdminMain() {
     const [product, setProduct] = useState("");
+    let history = useHistory();
 
     function handleChange(e) {
         setProduct(e.target.value);
@@ -20,6 +22,7 @@ function AdminMain() {
             // mode: 'no-cors',
         }).then(res => {
             console.log('success');
+            history.push('/');
         }).catch(err => {
             console.log(err.message);
         });
