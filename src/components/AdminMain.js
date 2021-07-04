@@ -22,10 +22,11 @@ function AdminMain() {
             // mode: 'no-cors',
         }).then(res => {
             console.log('success');
-            history.push('/');
         }).catch(err => {
             console.log(err.message);
         });
+
+        history.push('/');
     }
 
     return (
