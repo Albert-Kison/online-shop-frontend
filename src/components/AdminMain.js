@@ -32,7 +32,7 @@ function AdminMain() {
             <label htmlFor="title">Title</label>
                 <input type="text" onChange={handleChange} value={product} id="title"/>
             </div>
-                <button type="submit">Send</button>
+                <button className="btn" type="submit">Send</button>
             </form>
         </div>
     )

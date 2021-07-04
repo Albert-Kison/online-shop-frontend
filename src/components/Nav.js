@@ -1,15 +1,15 @@
-import StyledLink from './StyledLink';
+import NavLink from './NavLink';
 
 function Nav() {
 
     return (
         <ul className="main-header__item-list">
-            <StyledLink to="/">
+            <NavLink to="/">
                 <li className="main-header__item">Shop</li>
-            </StyledLink>
-            <StyledLink to="/admin/add-product">
+            </NavLink>
+            <NavLink to="/admin/add-product">
                 <li className="main-header__item">Add product</li>
-            </StyledLink>
+            </NavLink>
         </ul>
     );
 }

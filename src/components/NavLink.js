@@ -3,11 +3,17 @@ import styled from "styled-components";
 
 const StyledLink = styled(Link)`
     text-decoration: none;
-    color: black;
+    color: white;
 
     &:hover, &:active {
-        color: #3e00a1;
+        color: #ffeb3b;
     }
     `;
 
-export default (props) => <StyledLink {...props} />;
+const NavLink = function(props) {
+    return (
+        <StyledLink {...props} />
+    );
+}
+
+export default NavLink;
