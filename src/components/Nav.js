@@ -1,15 +1,15 @@
-import NavLink from './NavLink';
+import StyledNavLink from './NavLink';
 
 function Nav() {
 
     return (
         <ul className="main-header__item-list">
-            <NavLink to="/">
+            <StyledNavLink exact activeStyle={{color: "#ffeb3b"}} to="/">
                 <li className="main-header__item">Shop</li>
-            </NavLink>
-            <NavLink to="/admin/add-product">
+            </StyledNavLink>
+            <StyledNavLink exact activeStyle={{color: "#ffeb3b"}} to="/admin/add-product">
                 <li className="main-header__item">Add product</li>
-            </NavLink>
+            </StyledNavLink>
         </ul>
     );
 }

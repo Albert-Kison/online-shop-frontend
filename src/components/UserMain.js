@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import ProductCard from './ProductCard';
 
 function UserMain() {
     const [products, setProducts] = useState([]);
@@ -16,12 +17,14 @@ function UserMain() {
 
     return (
         <div>
-            <h1>My products</h1>
-            {products.map((product, i) => {
-                return (
-                    <p key={i}>{i + 1}. {product.title}</p>
-                );
-            })}
+            {products.length === 0 ? <h1>No products</h1> : 
+            <div className="grid">
+                {products.map((product, i) => {
+                    return (
+                        <ProductCard key={i} title={product.title} />
+                    );
+                })}
+            </div>}
         </div>
     )
 }
