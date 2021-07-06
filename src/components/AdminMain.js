@@ -34,7 +34,7 @@ function AdminMain() {
             <form className="product-form" onSubmit={handleSubmit}>
             <div className="form-control">
             <label htmlFor="title">Title</label>
-                <input type="text" onChange={handleChange} value={product} id="title"/>
+                <input type="text" onChange={handleChange} value={product} id="title" autoComplete="off" />
             </div>
                 <button className="btn" type="submit">Send</button>
             </form>

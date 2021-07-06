@@ -8,6 +8,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/products" component={Home} />
+          {/* <Route exact path="/cart" component={Home} /> */}
           <Route exact path="/admin/add-product" component={Home} />
           <Route path="*" component={NotFound} />
         </Switch>
