@@ -21,7 +21,7 @@ function UserMain() {
             <div className="grid">
                 {products.map((product, i) => {
                     return (
-                        <ProductCard key={i} title={product.title} />
+                        <ProductCard key={i} product={product} />
                     );
                 })}
             </div>}
