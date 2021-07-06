@@ -1,21 +1,16 @@
 import StyledNavLink from './NavLink';
+import {routes} from '../routes/routes';
 
 function Nav() {
-
     return (
         <ul className="main-header__item-list">
-            <StyledNavLink exact activeStyle={{color: "#ffeb3b"}} to="/">
-                <li className="main-header__item">Shop</li>
-            </StyledNavLink>
-            <StyledNavLink exact activeStyle={{color: "#ffeb3b"}} to="/products">
-                <li className="main-header__item">Products</li>
-            </StyledNavLink>
-            {/* <StyledNavLink exact activeStyle={{color: "#ffeb3b"}} to="/cart">
-                <li className="main-header__item">Cart</li>
-            </StyledNavLink> */}
-            <StyledNavLink exact activeStyle={{color: "#ffeb3b"}} to="/admin/add-product">
-                <li className="main-header__item">Add product</li>
-            </StyledNavLink>
+            {routes.slice(0, routes.length - 1).map((route, i) => {
+                return (
+                    <StyledNavLink exact activeStyle={{color: "#ffeb3b"}} to={route.path} key={i}>
+                        <li className="main-header__item">{route.title}</li>
+                    </StyledNavLink>
+                )
+            })}
         </ul>
     );
 }

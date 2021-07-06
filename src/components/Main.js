@@ -1,14 +1,14 @@
 import {Switch, Route} from 'react-router-dom';
-import AdminMain from './AdminMain';
-import UserMain from './UserMain';
-import Products from './Products';
+import {routes} from '../routes/routes';
 
 function Main() {
     return (
         <Switch>
-            <Route path="/" exact component={UserMain} />
-            <Route path="/products" exact component={Products} />
-            <Route path="/admin/add-product" component={AdminMain} />
+            {routes.map((route, i) => {
+                return (
+                    <Route path={route.path} exact component={route.page} key={i} />
+                )
+            })}
         </Switch>
     )
 }
