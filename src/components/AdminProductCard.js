@@ -1,4 +1,6 @@
-function ProductCard(props) {
+import {Link} from 'react-router-dom';
+
+function AdminProductCard(props) {
     return (
         <div>
             <article className="card product-item">
@@ -13,11 +15,14 @@ function ProductCard(props) {
                     <p className="product__description">{props.product.description}</p>
                 </div>
                 <div className="card__actions">
-                    <button className="btn">Add to Cart</button>
+                    <Link to="/admin/edit-product">
+                        <button className="btn">Edit</button>
+                    </Link>
+                    <button className="btn">Delete</button>
                 </div>
             </article>
         </div>
     );
 }
 
-export default ProductCard;
+export default AdminProductCard;

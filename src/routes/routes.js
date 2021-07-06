@@ -2,6 +2,7 @@ import AdminMain from "../components/AdminMain";
 import AdminProducts from "../components/AdminProducts";
 import Cart from "../components/Cart";
 import NotFound from "../components/NotFound";
+import Orders from "../components/Orders";
 import Products from "../components/Products";
 import UserMain from "../components/UserMain";
 
@@ -20,6 +21,11 @@ export const routes = [
         path: '/cart',
         title: 'Cart',
         page: Cart,
+    },
+    {
+        path: '/orders',
+        title: 'Orders',
+        page: Orders,
     },
     {
         path: '/admin/add-product',
